@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-// ================= VEHICLE =================
+// vehicle class
 class Vehicle {
 protected:
     string number;
@@ -30,7 +30,7 @@ public:
     void display() { cout << "Truck: " << number; }
 };
 
-// ================= PARKING SLOT =================
+// PARKING SLOT
 class ParkingSlot {
 public:
     int slotNumber;
@@ -70,7 +70,6 @@ public:
     }
 };
 
-// ================= SORTING =================
 
 // Selection Sort (by slot number)
 void selectionSort(vector<ParkingSlot>& slots) {
@@ -115,7 +114,7 @@ void insertionSort(vector<ParkingSlot>& slots) {
     cout << "Insertion Sort done. Comparisons: " << comparisons << endl;
 }
 
-// Merge function
+// Merge function for Merge Sort
 void merge(vector<ParkingSlot>& slots, int l, int m, int r, int &comp) {
     vector<ParkingSlot> temp;
     int i = l, j = m + 1;
@@ -147,7 +146,7 @@ void mergeSort(vector<ParkingSlot>& slots, int l, int r, int &comp) {
     merge(slots, l, mid, r, comp);
 }
 
-// ================= MAIN =================
+// MAIN
 int main() {
     int n;
     cout << "Enter number of slots: ";

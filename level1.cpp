@@ -1,3 +1,7 @@
+/*
+    Author :  Umair Farooq
+    program : Parking Lot Management System
+*/
 #include <iostream>
 #include <vector>
 using namespace std;

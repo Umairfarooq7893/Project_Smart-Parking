@@ -4,7 +4,7 @@
 #include <queue>
 using namespace std;
 
-// ================= VEHICLE =================
+// VEHICLE
 class Vehicle {
 protected:
     string number;
@@ -32,7 +32,7 @@ public:
     void display() { cout << "Truck: " << number; }
 };
 
-// ================= LINKED LIST (Entry Log) =================
+// LINKED LIST (Entry Log)
 class Node {
 public:
     string data;
@@ -65,7 +65,7 @@ public:
     }
 };
 
-// ================= PARKING SLOT =================
+//PARKING SLOT
 class ParkingSlot {
 public:
     int slotNumber;
@@ -107,7 +107,7 @@ public:
     }
 };
 
-// ================= MAIN =================
+// MAIN
 int main() {
     int n;
     cout << "Enter number of slots: ";
