@@ -5,8 +5,6 @@
 #include <unordered_map>
 #include <cstring>
 using namespace std;
-
-// ================= VEHICLE =================
 class Vehicle {
 protected:
     string number;
@@ -50,7 +48,7 @@ public:
     }
 };
 
-// ================= LINKED LIST =================
+
 class Node {
 public:
     string data;
@@ -90,7 +88,7 @@ public:
     }
 };
 
-// ================= AVL TREE =================
+
 class AVLNode {
 public:
     int slot;
@@ -203,16 +201,15 @@ void inorder(AVLNode* root) {
     }
 }
 
-// ================= HEAP =================
 priority_queue<int> availableSlots;
 
-// ================= HASH TABLE =================
+
 unordered_map<string, int> vehicleMap;
 
-// ================= GRAPH =================
+
 vector<int> graph[100];
 
-// BFS
+
 void bfs(int start, int destination, int n) {
 
     vector<bool> visited(n + 1, false);
@@ -250,7 +247,6 @@ void bfs(int start, int destination, int n) {
     cout << "\nNo path found\n";
 }
 
-// ================= KMP =================
 bool KMPSearch(string text, string pattern) {
 
     int n = text.length();
@@ -309,8 +305,6 @@ bool KMPSearch(string text, string pattern) {
 
     return false;
 }
-
-// ================= PARKING SLOT =================
 class ParkingSlot {
 
 public:
@@ -379,7 +373,6 @@ public:
     }
 };
 
-// ================= MAIN =================
 int main() {
 
     int n;
@@ -396,7 +389,6 @@ int main() {
         availableSlots.push(i);
     }
 
-    // Create simple graph connections
     for (int i = 1; i < n; i++) {
 
         graph[i].push_back(i + 1);
@@ -430,7 +422,7 @@ int main() {
         cout << "Enter choice: ";
         cin >> choice;
 
-        // ================= PARK =================
+
         if (choice == 1) {
 
             int type, slot;
@@ -479,7 +471,6 @@ int main() {
             }
         }
 
-        // ================= VACATE =================
         else if (choice == 2) {
 
             int slot;
@@ -494,7 +485,7 @@ int main() {
                 cout << "Invalid slot\n";
         }
 
-        // ================= DISPLAY =================
+
         else if (choice == 3) {
 
             for (int i = 0; i < slots.size(); i++) {
@@ -502,13 +493,13 @@ int main() {
             }
         }
 
-        // ================= LOG =================
+
         else if (choice == 4) {
 
             log.display();
         }
 
-        // ================= UNDO =================
+
         else if (choice == 5) {
 
             if (!undoStack.empty()) {
@@ -527,7 +518,7 @@ int main() {
             }
         }
 
-        // ================= AVL =================
+
         else if (choice == 6) {
 
             cout << "AVL Tree: ";
@@ -537,7 +528,7 @@ int main() {
             cout << endl;
         }
 
-        // ================= HEAP =================
+
         else if (choice == 7) {
 
             if (!availableSlots.empty()) {
@@ -551,7 +542,6 @@ int main() {
             }
         }
 
-        // ================= HASH =================
         else if (choice == 8) {
 
             string num;
@@ -570,7 +560,6 @@ int main() {
             }
         }
 
-        // ================= KMP =================
         else if (choice == 9) {
 
             string pattern;
@@ -595,7 +584,7 @@ int main() {
                 cout << "No matching vehicle\n";
         }
 
-        // ================= BFS =================
+
         else if (choice == 10) {
 
             int start, destination;

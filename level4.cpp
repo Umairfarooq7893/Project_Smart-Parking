@@ -4,7 +4,6 @@
 #include <stack>
 using namespace std;
 
-// ================= VEHICLE =================
 class Vehicle {
 protected:
     string number;
@@ -47,8 +46,6 @@ public:
         cout << "Truck: " << number;
     }
 };
-
-// ================= LINKED LIST =================
 class Node {
 public:
     string data;
@@ -88,7 +85,6 @@ public:
     }
 };
 
-// ================= AVL TREE =================
 class AVLNode {
 public:
     int slot;
@@ -192,10 +188,9 @@ void inorder(AVLNode* root) {
     }
 }
 
-// ================= HEAP =================
 priority_queue<int> availableSlots;
 
-// ================= PARKING SLOT =================
+
 class ParkingSlot {
 public:
     int slotNumber;
@@ -248,7 +243,7 @@ public:
     }
 };
 
-// ================= MAIN =================
+
 int main() {
 
     int n;
@@ -284,7 +279,7 @@ int main() {
 
         cin >> choice;
 
-        // ================= PARK =================
+
         if (choice == 1) {
 
             int type, slot;
@@ -333,7 +328,7 @@ int main() {
             }
         }
 
-        // ================= VACATE =================
+
         else if (choice == 2) {
 
             int slot;
@@ -350,7 +345,6 @@ int main() {
             }
         }
 
-        // ================= DISPLAY =================
         else if (choice == 3) {
 
             for (int i = 0; i < slots.size(); i++) {
@@ -358,13 +352,12 @@ int main() {
             }
         }
 
-        // ================= ENTRY LOG =================
+
         else if (choice == 4) {
 
             log.display();
         }
 
-        // ================= UNDO =================
         else if (choice == 5) {
 
             if (!undoStack.empty()) {
@@ -381,16 +374,12 @@ int main() {
                 cout << "Nothing to undo\n";
             }
         }
-
-        // ================= AVL DISPLAY =================
         else if (choice == 6) {
 
             cout << "AVL Tree (Inorder): ";
             inorder(root);
             cout << endl;
         }
-
-        // ================= HEAP =================
         else if (choice == 7) {
 
             if (!availableSlots.empty()) {

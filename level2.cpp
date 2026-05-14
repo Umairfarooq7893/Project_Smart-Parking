@@ -2,7 +2,6 @@
 #include <vector>
 using namespace std;
 
-// vehicle class
 class Vehicle {
 protected:
     string number;
@@ -29,8 +28,6 @@ public:
     Truck(string num) : Vehicle(num) {}
     void display() { cout << "Truck: " << number; }
 };
-
-// PARKING SLOT
 class ParkingSlot {
 public:
     int slotNumber;
@@ -71,7 +68,6 @@ public:
 };
 
 
-// Selection Sort (by slot number)
 void selectionSort(vector<ParkingSlot>& slots) {
     int n = slots.size();
     int comparisons = 0;
@@ -90,7 +86,6 @@ void selectionSort(vector<ParkingSlot>& slots) {
     cout << "Selection Sort done. Comparisons: " << comparisons << endl;
 }
 
-// Insertion Sort (by vehicle number)
 void insertionSort(vector<ParkingSlot>& slots) {
     int comparisons = 0;
 
@@ -113,8 +108,6 @@ void insertionSort(vector<ParkingSlot>& slots) {
 
     cout << "Insertion Sort done. Comparisons: " << comparisons << endl;
 }
-
-// Merge function for Merge Sort
 void merge(vector<ParkingSlot>& slots, int l, int m, int r, int &comp) {
     vector<ParkingSlot> temp;
     int i = l, j = m + 1;
@@ -136,7 +129,6 @@ void merge(vector<ParkingSlot>& slots, int l, int m, int r, int &comp) {
     }
 }
 
-// Merge Sort (by vehicle number)
 void mergeSort(vector<ParkingSlot>& slots, int l, int r, int &comp) {
     if (l >= r) return;
 
@@ -146,7 +138,6 @@ void mergeSort(vector<ParkingSlot>& slots, int l, int r, int &comp) {
     merge(slots, l, mid, r, comp);
 }
 
-// MAIN
 int main() {
     int n;
     cout << "Enter number of slots: ";

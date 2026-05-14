@@ -5,8 +5,6 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
-// Abstract Class
 class Vehicle {
 protected:
     string number;
@@ -14,13 +12,12 @@ public:
     Vehicle(string num) {
         number = num;
     }
-    virtual void display() = 0; // pure virtual function
+    virtual void display() = 0;
     string getNumber() {
         return number;
     }
 };
 
-// Derived Classes
 class Car : public Vehicle {
 public:
     Car(string num) : Vehicle(num) {}
@@ -45,7 +42,6 @@ public:
     }
 };
 
-// Parking Slot Class
 class ParkingSlot {
     int slotNumber;
     Vehicle* vehicle;
@@ -89,7 +85,6 @@ public:
     }
 };
 
-// Main Function
 int main() {
     int n;
     cout << "Enter number of parking slots: ";
